@@ -19,6 +19,13 @@ namespace CensusAnalyserProgram.POCO
         public double landArea;
         public double populationDensity;
         public double housingDensity;
+        public CensusDTO(StateCodeDAO stateCodeDao)
+        {
+            this.serialNumber = stateCodeDao.serialNumber;
+            this.stateName = stateCodeDao.stateName;
+            this.tin = stateCodeDao.tin;
+            this.stateCode = stateCodeDao.stateCode;
+        }
         public CensusDTO(CensusDataDAO censusDataDao)
         {
             this.state = censusDataDao.state;
